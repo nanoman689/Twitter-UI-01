@@ -46,8 +46,11 @@ body, html {
 }
 
 .midStats {
+    position: relative;
+    top: 20%;
+    display: table;
     height: 95%;
-    width: 95%;
+    width: 100%;
 }
 
 .bottom {
@@ -58,19 +61,50 @@ body, html {
 }
 
 .bottomText {
+    line-height: 1.6;
     position: relative;
-    top: 17%;
+    top: -1%;
     left: 8%;
     width: 90%;
 }
 
+.bottomArrow {
+    position: relative;
+    width: 0;
+    height: 0;
+    left:191px;
+    top: -8px;
+    border-left:8px solid transparent;
+    border-right:8px solid transparent;
+    border-bottom: 8px solid #f5f8fa;
+}
+
+
+.bottomArrow:before {
+    border-color:#ccd6dd;
+    border-bottom-color:#f5f8fa;
+    border-width:10px;
+    margin-left: -10px;
+}
+
+.bottomArrow:after {
+    border-color:#ccd6dd;
+    border-bottom-color:#f5f8fa;
+    border-width:10px;
+    margin-left: -10px;
+}
+
 span.bottomTextAddOn {
+    margin: 0;
     color: blue;
+    font-weight: 100;
+    font-size: 12px;
 }
 
 span.bottomTextGain {
+    margin: 0;
     font-weight: 800;
-    font-size:12px;
+    font-size:14px;
 }
 
 h2 {
@@ -86,9 +120,10 @@ h3 {
 
 h4 {
     margin: 0;
-    font-size: 10px;
+    font-size: 11px;
     text-transform: uppercase;
     padding-left:10px;
+    color: #8899a8;
 }
 
 h5 {
@@ -98,14 +133,10 @@ h5 {
     color: #0084b4;
 }
 
-
 ul {
-    position: relative;
-    left:5%;
-    top: 7%;
     list-style: none;
     list-style-type: none;
-    display: inline-flex;
+    display: table-row;
 }
 
 li {
@@ -113,4 +144,5 @@ li {
     padding: 0;
     list-style-type: none;
     list-style-position: inside;
+    display: table-cell;
 }
